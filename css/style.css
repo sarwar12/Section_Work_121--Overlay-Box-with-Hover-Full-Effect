@@ -1,0 +1,87 @@
+/* Main CSS Start */
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+body{
+	font-family: sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+	margin: 0 0 15px;
+	font-weight: 700;
+}
+a:focus, input:focus, teaxarea:focus, button:focus{outline: 0 solid;}
+a:hover{
+	text-decoration: none;
+}
+.section-padding{padding: 0px 0;}
+/* Main CSS Stop */
+/* === OVERLAY BOX Section CSS Start === */
+.bg-1{background-image: url(../img/bg-1.jpg);}
+.bg-2{background-image: url(../img/bg-2.png);}
+.bg-3{background-image: url(../img/bg-3.jpg);}
+.bg-4{background-image: url(../img/bg-4.jpg);}
+.section-padding {
+  background-color: #efefef;
+  margin: 50px 0;
+}
+.service-icon {
+  font-size: 120px;
+  opacity: .2;
+  line-height: 120px;
+  margin-bottom: 40px;
+}
+.single-service-item {
+  position: relative;
+  z-index: 2;
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 80px 30px;
+}
+.single-service-item h2 {
+  margin-bottom: 50px;
+}
+.single-service-item:hover .service-item-hover {
+  opacity: 1;
+  visibility: visible;
+  transform:scale(1.1);
+}
+.service-item-hover {
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	background-color: #000;
+	transform: scale(1);
+	z-index: 1;
+	transition:.3s;
+}
+.service-item-inner{position: relative; z-index: 3;}
+.service-item-hover::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	opacity: .8;
+	background: #b4ddb4;
+	background: linear-gradient(45deg,#b4ddb4 0%,#83c783 17%,#52b152 33%,#008a00 67%,#005700 83%,#002400 100%);
+}
+.single-service-item:hover {
+  color: #fff;
+}
+.single-service-item:hover .service-icon {
+  opacity: 1;
+}
+/* === OVERLAY BOX Section CSS Stop === */
